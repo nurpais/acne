@@ -1,0 +1,210 @@
+.btn {
+  border-radius: 80px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+  border: 1px solid #dde2e0;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  white-space: nowrap;
+  min-width: 160px;
+  min-height: 56px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.btn:hover {
+  background-color: #f3f6f5;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark) !important;
+  border: 1px solid var(--primary-dark) !important;
+}
+
+.btn-close {
+  cursor: pointer;
+}
+
+/* Btn outline */
+.btn-primary.btn-outline {
+  background-color: #fff !important;
+  color: var(--primary) !important;
+}
+
+.btn-primary.btn-outline:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-hover--light:hover {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: var(--primary) !important;
+}
+
+.btn-disabled {
+  background-color: #dde2e0;
+  color: #636363;
+  cursor: not-allowed;
+}
+.btn-disabled:hover {
+  background-color: #dde2e0;
+  color: #636363;
+}
+
+/* Button sizes */
+.btn-min {
+  min-width: 80px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+}
+
+.btn-xs {
+  min-width: 120px;
+  min-height: 48px;
+}
+
+.btn-sm {
+  min-width: 144px;
+  min-height: 48px;
+}
+
+.btn-lg {
+  min-width: 200px;
+  min-height: 56px;
+}
+
+/* Navbar buttons */
+.navbar-cta {
+  min-width: 120px;
+  min-height: 40px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 12px;
+}
+
+.btn.navbar-cta:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Submenu btn */
+.submenu-btn {
+  border-radius: 147px;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 6px 16px;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.submenu-btn:hover {
+  background-color: var(--primary-light);
+}
+.submenu-btn.active {
+  background-color: var(--primary-light);
+}
+
+/* Circle arrow */
+.btn-circle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.btn-circle img {
+  max-width: 24px;
+}
+
+/*  Btn group */
+.btn-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.btn-group > * {
+  margin-right: 8px;
+}
+
+.btn-group > *:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 350px) {
+  .btn-group.flex-wrap-sm {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .btn-group.flex-wrap-sm > * {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .btn-group.flex-wrap > * {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+  .btn-group.flex-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .btn-group > *:last-child {
+    margin-bottom: 0;
+  }
+  .btn-group.btn-mb-fluid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .btn-group.btn-mb-fluid > * {
+    min-width: initial;
+    width: 100%;
+  }
+}
+
+/* Tablet up */
+@media (min-width: 992px) {
+  .navbar-cta {
+    min-width: 184px;
+    min-height: 48px;
+    font-size: 14px;
+  }
+}

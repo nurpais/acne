@@ -1,0 +1,48 @@
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.img-group {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 1px;
+}
+
+.img-group > img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.w-max-400 {
+  max-width: 400px !important;
+}
+
+.w-max-500 {
+  max-width: 500px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .img-group {
+    -ms-grid-columns: 1fr 1px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .w-max-md-500 {
+    max-width: 500px !important;
+  }
+
+  .w-100.w-md-auto {
+    width: initial !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .img-group {
+    -ms-grid-columns: 1fr 1px 1fr 1px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

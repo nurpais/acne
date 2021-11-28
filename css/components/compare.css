@@ -1,0 +1,137 @@
+/* Compare section */
+.compare-section {
+  padding: 120px 0 60px;
+}
+.compare-group .ba-slider {
+  margin: 0 auto;
+}
+.compare-group .compare-caption {
+  margin: 0 auto;
+}
+
+.compare-caption {
+  padding: 13px 16px;
+  background-color: var(--primary-light);
+  max-width: 343px;
+}
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 343px;
+}
+
+.ba-slider img {
+  width: 100%;
+  display: block;
+  max-width: initial !important;
+}
+
+.resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.handle {
+  /* Thin line seperator */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  margin-left: -1px;
+  background: #fff;
+  cursor: ew-resize;
+}
+
+.handle:after {
+  /* Big white knob  */
+  position: absolute;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  content: "";
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("../../gfx/button-drag.svg");
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ba-slider {
+  height: 300px;
+}
+
+@media (min-width: 340px) {
+  .ba-slider {
+    height: 320px;
+  }
+}
+
+@media (min-width: 350px) {
+  .ba-slider {
+    height: 350px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .compare-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .compare-group > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .ba-slider {
+    height: 310px;
+  }
+}
+
+@media (min-width: 992px) {
+  .compare-caption {
+    max-width: 424px;
+    min-width: 424px;
+  }
+
+  .ba-slider {
+    max-width: 424px;
+    min-width: 424px;
+  }
+
+  .compare-group > * {
+    -webkit-box-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+  }
+}
+
+.after,
+.before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .ba-slider {
+    height: 435px;
+  }
+}

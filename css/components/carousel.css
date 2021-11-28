@@ -1,0 +1,113 @@
+/* Carousel section  */
+.carousel-section {
+  padding: 120px 0 116px;
+  background-color: var(--primary-light);
+  overflow: hidden;
+}
+
+.carousel-container {
+  padding-left: 1rem;
+}
+
+.carousel-section .owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.carousel-item {
+  height: 100%;
+  position: relative;
+}
+
+.problems-carousel {
+  -webkit-transition: left 0.4s linear;
+  -o-transition: left 0.4s linear;
+  transition: left 0.4s linear;
+}
+
+.problems-carousel .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#carousel-link {
+  position: absolute;
+  top: calc(50% - 43px);
+  right: -117px;
+}
+
+.owl-carousel {
+  -ms-touch-action: pan-y !important;
+  touch-action: pan-y !important;
+}
+
+.owl-item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.all-cards {
+  height: 100%;
+  padding-left: calc(40px - 16px);
+  background-color: transparent !important;
+}
+
+/* Tablet up */
+@media (min-width: 768px) {
+  .carousel-container {
+    padding-left: 1.5rem;
+  }
+}
+
+/* Desktop up */
+@media (min-width: 992px) {
+  .carousel-container {
+    padding-left: 64px;
+  }
+}
+
+/* Carousel card */
+.carousel-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px 18px;
+  display: inline-block;
+  width: 320px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .carousel-card:hover .carousel-img img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.carousel-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 150px;
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.carousel-img img {
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

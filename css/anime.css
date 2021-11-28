@@ -1,0 +1,173 @@
+.home-navbar,
+.home-navbar .alert,
+.home-navbar .alert > *,
+.home-navbar .navbar-item,
+.hero::after,
+.hero h1,
+.hero__text,
+.hero .btn,
+.skin-hero__body h1,
+.skin-hero__body p,
+.skin-single .content,
+.procedure-section h1,
+.procedure-section p.mt-3,
+.procedure-section .video {
+  animation-timing-function: cubic-bezier(0.251, 0.102, 0.25, 1) !important;
+  animation-fill-mode: forwards !important;
+}
+
+.hero__body h1,
+.hero__text,
+.hero__body .btn,
+.block-animate,
+.skin-hero__body h1,
+.skin-hero__body p,
+.procedure-section h1,
+.procedure-section p.mt-3,
+.procedure-section .video,
+.procedure__screen {
+  transform: translateX(-30px);
+  opacity: 0;
+  backface-visibility: hidden;
+}
+
+.opacity-animate {
+  opacity: 0;
+}
+
+.opacity-animate.animate {
+  opacity: 1;
+}
+
+.skin-single .content,
+.procedure-section .content,
+.wordlist-section .content,
+.wordlist__block {
+  transform: translateY(30px);
+  opacity: 0;
+  backface-visibility: hidden;
+}
+
+.home-navbar {
+  height: 8px;
+  width: 0%;
+  /* overflow: hidden; */
+}
+
+/* .menu-open .home-navbar {
+  overflow: initial;
+} */
+
+.home-animate .home-navbar {
+  animation: navbarWidth 0.8s, navbarHeight 0.4s 1s;
+}
+
+.home-navbar .alert {
+  height: 8px;
+  width: 0%;
+}
+
+.home-animate .home-navbar .alert {
+  animation: navbarWidth 0.8s 0.2s, navbarHeightAlert 0.4s 1s;
+}
+
+.home-navbar .navbar-item,
+.home-navbar .alert > *,
+#hero-video,
+.hero::after {
+  opacity: 0;
+}
+
+.home-animate .home-navbar .navbar-item,
+.home-animate .home-navbar .alert > * {
+  animation: showItems 0.8s 1.5s;
+}
+
+.home-animate .hero::after {
+  animation: showVideoCurtain 0.4s 1s;
+}
+
+.home-animate .hero__body h1 {
+  animation: showHeroText 0.8s 1.6s;
+}
+
+.home-animate .hero__text {
+  animation: showHeroText 0.8s 1.7s;
+}
+
+.home-animate .hero__body .btn:first-child {
+  animation: showHeroText 0.8s 1.8s;
+}
+
+.home-animate .hero__body .btn:last-child {
+  animation: showHeroText 0.8s 1.9s;
+}
+
+.block-animate {
+  transform: translateX(-30px);
+  opacity: 0;
+  backface-visibility: hidden;
+}
+
+.block-animate.animate,
+.opacity-animate.animate {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+  transition: all 0.4s cubic-bezier(0.251, 0.102, 0.25, 1);
+}
+
+@keyframes navbarWidth {
+  from {
+    width: 0%;
+    overflow: hidden;
+  }
+
+  to {
+    width: 100%;
+    overflow: initial;
+  }
+}
+
+@keyframes navbarHeight {
+  from {
+    height: 8px;
+  }
+
+  to {
+    height: 104px;
+    overflow: initial;
+  }
+}
+
+@keyframes navbarHeightAlert {
+  from {
+    height: 8px;
+  }
+
+  to {
+    height: 32px;
+  }
+}
+
+@keyframes showItems {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showVideoCurtain {
+  to {
+    opacity: 0.25;
+  }
+}
+
+@keyframes showHeroText {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.height-auto {
+  height: auto !important;
+}

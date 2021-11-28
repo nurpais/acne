@@ -1,0 +1,122 @@
+.wordlist__letters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: auto;
+  margin-right: -16px;
+}
+
+.wordlist__letters {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+.wordlist__letters li {
+  padding: 0 8px;
+}
+.wordlist__letters a {
+  padding: 16px 4px 10px;
+  color: #636363;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.wordlist__letters a.active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* .wordlist__letters li:hover a {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+} */
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.wordlist__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.wordlist__letter {
+  min-width: 48px;
+  min-height: 48px;
+  background-color: var(--primary-light);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+  margin-right: 16px;
+  margin-top: -8px;
+  text-transform: uppercase;
+  visibility: hidden;
+  position: absolute;
+}
+
+.wordlist__item {
+  max-width: 648px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wordlist__item a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .wordlist__letters li {
+    padding: 0 12px;
+  }
+
+  .wordlist__letter {
+    visibility: initial;
+    position: static;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .wordlist__letters {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
+
+.wordlist {
+  position: sticky;
+  top: 105px;
+  background-color: #fff;
+  z-index: 222;
+}

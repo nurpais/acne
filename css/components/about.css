@@ -1,0 +1,42 @@
+.about-section {
+  padding: 60px 0 120px;
+  position: relative;
+  z-index: 20;
+  background-color: #fff;
+}
+
+.about-icon {
+  min-width: 72px;
+  max-width: 72px;
+  display: inline-block !important;
+}
+
+.about-carousel.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #000 !important;
+}
+
+.about-carousel.owl-theme .owl-dots .owl-dot span {
+  background-color: #dde2e0;
+  width: 8px;
+  height: 8px;
+}
+.about-carousel.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 71px;
+}
+.about-carousel > * {
+  margin-top: 80px;
+}
+
+.about-img {
+  width: 100%;
+}
+
+/* Desktop up */
+@media (min-width: 992px) {
+  .about-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
+/* Utils */
+@import "./utils/minireset.css";
+@import "./variables.css";
+@import "./utils/helps.css";
+
+@import "./spacing.css";
+
+/* Bootstrap */
+@import "./bootstrap/bootstrap-grid.min.css";
+@import "./bootstrap/bootstrap-utilities.min.css";
+
+/* Owl carousel */
+@import "./owl-carousel/owl.carousel.min.css";
+@import "./owl-carousel/owl.theme.default.min.css";
+
+@import "./fonts.css";
+@import "./buttons.css";
+@import "./lists.css";
+@import "./forms.css";
+
+/* Components */
+@import "./components/alert.css";
+@import "./components/navbar.css";
+@import "./components/hero.css";
+@import "./components/steps.css";
+@import "./components/carousel.css";
+@import "./components/compare.css";
+@import "./components/about.css";
+@import "./components/cta.css";
+@import "./components/footer.css";
+@import "./components/video.css";
+
+@import "./components/skin-cards.css";
+@import "./components/single-skin.css";
+@import "./components/procedures.css";
+@import "./components/procedure.css";
+@import "./components/our-method.css";
+@import "./components/results.css";
+@import "./components/franchise.css";
+@import "./components/wordlist.css";
+@import "./quiz.css";
+
+@import "./anime.css";
+
+html {
+  font-size: 16px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font, "Inter");
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.03em;
+  line-height: 26px;
+  background-color: var(--body-bg, #fff);
+  color: var(--body-color, #636363);
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,28 @@
+.alert {
+  color: #dde2e0;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 6px 1rem;
+  position: relative;
+  background-color: #b4b4b4;
+}
+
+.alert-primary {
+  background-color: var(--primary-darken);
+}
+.alert a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.alert-close {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

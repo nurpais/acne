@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Consultation</title>
+    <meta
+      name="description"
+      content="Finding your perfect skin care routine should be easy - just fill out the questionnaire and one of our estheticians will give you a personalised recommendation in no time!"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+ <div class="layer-1">
+      <!-- Quiz home -->
+      <div class="quiz-absolute">
+        <div class="container-md mt-3 d-flex p-md-0 justify-content-between">
+          <a class="btn btn-min" href="#"><img src="./gfx/pictogram-arrow.svg" alt="Back" /></a>
+  
+          <div class="d-none d-md-block">
+            <span class="text-sm mr-2">Already had consultation?</span>
+            <a class="btn btn-min" href="#">Login</a>
+          </div>
+          <div class="d-md-none">
+            <a href="#" class="btn btn-min px-3">I Registered</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="quiz-content ">
+        <div class="container-md mt-4">
+          <div class="row align-items-center">
+            <div class="col-md-6 justify-content-center d-none d-md-flex">
+              <img src="./images/quiz-start.png" alt="Online Consultation" />
+            </div>
+            <div class="col-md-6 pl-4 p-md-0">
+              <h1 class="title">Online Consultation</h1>
+              <p class="mt-3">
+                Finding your perfect skin care routine should be easy - just fill out the questionnaire and one of our
+                estheticians will give you a personalised recommendation in no time!
+              </p>
+              <ul class="quiz-list mt-4">
+                <li>
+                  <span class="quiz-list__order">1</span>
+                  <span>Quiz - What is my problem?</span>
+                </li>
+                <li>
+                  <span class="quiz-list__order">2</span>
+                  <span>Questionnaire - Why does it occur?</span>
+                </li>
+                <li>
+                  <span class="quiz-list__order">3</span>
+                  <span>Get answer - How to solve?</span>
+                </li>
+              </ul>
+              <a id="start" href="#" class="btn btn-primary btn-lg mt-4">Start Quiz</a>
+              <div class="mt-4 text-sm d-flex align-items-center">
+                <span class="mr-2">In colaboration with</span>
+                <a class="d-inline-flex" href="#"><img src="./gfx/DAHL-logo.svg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./Quiz home -->
+ </div>
+
+   <div class="quiz-layer" style="display: none;">
+      <!-- Quiz navbar -->
+    <div class="quiz-navbar">
+      <div class="container-md">
+        <div class="row g-0">
+          <div class="col">
+            <a id="prev" class="btn btn-min" href="#"><img src="./gfx/pictogram-arrow.svg" alt="Back" /></a>
+          </div>
+          <div class="col d-flex justify-content-center align-items-center">
+            <a class="d-flex" href="index.html"><img src="gfx/quiz-logo.svg" alt="Acnespecialisten" /></a>
+          </div>
+          <div class="col text-right"><a class="btn btn-min" href="#">Exit</a></div>
+        </div>
+      </div>
+      <div id="quiz-progress" class="quiz-progress"></div>
+    </div>
+
+    <!-- Quiz body -->
+    <div class="quiz-body pt80">
+      <div class="container-md text-center">
+        <!-- Form -->
+        <form action="#">
+          <!-- Quiz item -->
+          <div class="quiz-item">
+            <h3>Please, select your gender</h3>
+            <div class="quiz-cards columns-2 mt-4">
+              <label>
+                <input class="d-none" name="gender" value="male" type="radio" />
+                <div class="quiz-card">
+                  <div>
+                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        class="quiz-icon fill"
+                        d="M28 0C27.4477 0 27 0.447715 27 1C27 1.55228 27.4477 2 28 2V0ZM44 1H45V0H44V1ZM43 18C43 18.5523 43.4477 19 44 19C44.5523 19 45 18.5523 45 18H43ZM28.6511 15.8491C28.2726 16.2513 28.2918 16.8842 28.6939 17.2627C29.0961 17.6412 29.729 17.622 30.1075 17.2198L28.6511 15.8491ZM32 28C32 36.2843 25.2843 43 17 43V45C26.3888 45 34 37.3888 34 28H32ZM17 43C8.71573 43 2 36.2843 2 28H0C0 37.3888 7.61116 45 17 45V43ZM2 28C2 19.7157 8.71573 13 17 13V11C7.61116 11 0 18.6112 0 28H2ZM17 13C25.2843 13 32 19.7157 32 28H34C34 18.6112 26.3888 11 17 11V13ZM28 2H44V0H28V2ZM43 1V18H45V1H43ZM43.2718 0.314635L28.6511 15.8491L30.1075 17.2198L44.7282 1.68536L43.2718 0.314635Z"
+                        fill="#DDE2E0"
+                      />
+                    </svg>
+
+                    <div class="text-sm mt-3">Male</div>
+                  </div>
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="gender" value="female" type="radio" />
+                <div class="quiz-card">
+                  <div>
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        class="quiz-icon"
+                        d="M24 33C32.8366 33 40 25.8366 40 17C40 8.16344 32.8366 1 24 1C15.1634 1 8 8.16344 8 17C8 25.8366 15.1634 33 24 33ZM24 33V46.5M18 42H30"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+
+                    <div class="text-sm mt-3">Female</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <div class="mt40">
+              <h3>and enter your birthday</h3>
+              <input class="quiz-date m-4" type="text" name="date" placeholder="DD/MM/YYYY" />
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="d-flex justify-content-center mt-4 valid">
+              <a class="btn btn-lg btn-disabled" href="#">Complete Information</a>
+              <a href="#" class="btn btn-primary btn-lg next-quiz">Next step</a>
+            </div>
+            <!-- BUTTONS -->
+          </div>
+          <!-- ./Quiz item -->
+          <!-- Quiz item -->
+          <div class="quiz-item">
+            <h3>Please select infected areas</h3>
+            <div class="quiz-cards columns-4 mt-4">
+              <label>
+                <input class="d-none" name="areas-face" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  <div>
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        class="quiz-icon"
+                        d="M14 33H32M45 23C45 35.1503 35.1503 45 23 45C10.8497 45 1 35.1503 1 23C1 10.8497 10.8497 1 23 1C35.1503 1 45 10.8497 45 23ZM15 21C15 22.1046 14.1046 23 13 23C11.8954 23 11 22.1046 11 21C11 19.8954 11.8954 19 13 19C14.1046 19 15 19.8954 15 21ZM35 21C35 22.1046 34.1046 23 33 23C31.8954 23 31 22.1046 31 21C31 19.8954 31.8954 19 33 19C34.1046 19 35 19.8954 35 21Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                    <div class="text-sm mt-3">Face</div>
+                  </div>
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="areas-chest" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  <div>
+                    <svg width="46" height="44" viewBox="0 0 46 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        class="quiz-icon"
+                        d="M9 18V43H37V18M37 25H45V7C45 3.68629 42.3137 1 39 1H31M9 25H1V7C1 3.68629 3.68629 1 7 1H15M32 1C32 5.97056 27.9706 10 23 10C18.0294 10 14 5.97056 14 1"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    <div class="text-sm mt-3">Chest</div>
+                  </div>
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="areas-back" type="checkbox" />
+
+                <div class="quiz-card quiz-card--danger">
+                  <div>
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        class="quiz-icon"
+                        d="M24.9998 46H5.49976L3.30555 20.0353C2.8549 14.7025 6.68259 9.96028 11.9903 9.27541L17.9998 8.5V3H29.9998V8.5L36.0092 9.27541C41.3169 9.96028 45.1446 14.7025 44.694 20.0353L42.4998 46H22.9998"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                      />
+                      <path class="quiz-icon" d="M10 22L14 40.5L12.5 46" stroke="#DDE2E0" stroke-width="2" />
+                      <path class="quiz-icon" d="M38 22L34 40.5L35.5 46" stroke="#DDE2E0" stroke-width="2" />
+                      <path class="quiz-icon" d="M24 15V35.5" stroke="#DDE2E0" stroke-width="2" />
+                    </svg>
+
+                    <div class="text-sm mt-3">Back</div>
+                  </div>
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="areas-other" type="checkbox" />
+
+                <div class="quiz-card quiz-card--danger">
+                  <div>
+                    <svg
+                      class="quiz-icon"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M17 21V46.0003" stroke="#DDE2E0" stroke-width="2" stroke-linecap="round" />
+                      <path d="M31 21V46.0003" stroke="#DDE2E0" stroke-width="2" stroke-linecap="round" />
+                      <path d="M17 36H31" stroke="#DDE2E0" stroke-width="2" stroke-linecap="round" />
+                      <circle cx="24" cy="7" r="5" stroke="#DDE2E0" stroke-width="2" stroke-linecap="round" />
+                      <path
+                        d="M38 32L35.6118 19.2628C35.2571 17.371 33.6052 16 31.6803 16H16.3197C14.3948 16 12.7429 17.371 12.3882 19.2628L10 32"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+
+                    <div class="text-sm mt-3">Other</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="d-flex justify-content-center mt-4 valid">
+              <a class="btn btn-lg btn-disabled" href="#">Complete Information</a>
+              <a href="#" class="btn btn-primary btn-lg next-quiz">Next step</a>
+            </div>
+            <!-- BUTTONS -->
+          </div>
+          <!-- ./Quiz item -->
+          <!-- Quiz item -->
+          <div class="quiz-item">
+            <h3>Point face zones</h3>
+            <div class="quiz-cards quiz-cards--md columns-4 mt-4">
+              <label>
+                <input class="d-none" name="all-face" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  All face
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="t-zone" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  T-Zone
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="t-zone-2" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  T-Zone
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Nose" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Nose
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Mouth" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Mouth
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Jaws" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Jaws
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Chin" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Chin
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Eyes" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Eyes
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Nostrils" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Nostrils
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Cheeks" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Cheeks
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Ears" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Ears
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Neck" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+            </div>
+            <div class="mt-4">
+              <img src="./gfx/quiz/zones.png" alt="" />
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="d-flex justify-content-center mt-4 valid">
+              <a class="btn btn-lg btn-disabled" href="#">Complete Information</a>
+              <a href="#" class="btn btn-primary btn-lg next-quiz">Next step</a>
+            </div>
+            <!-- BUTTONS -->
+          </div>
+          <!-- ./Quiz item -->
+          <!-- Quiz item -->
+          <div class="quiz-item">
+            <h3>What symptoms do you have?</h3>
+            <div class="quiz-cards quiz-cards--md columns-6 mt-4">
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+              <label>
+                <input class="d-none" name="Acne" type="checkbox" />
+                <div class="quiz-card quiz-card--danger">
+                  Neck
+                </div>
+              </label>
+            </div>
+            <!-- BUTTONS -->
+            <div class="d-flex justify-content-center mt-4 valid">
+              <a class="btn btn-lg btn-disabled" href="#">Complete Information</a>
+              <a href="#" class="btn btn-primary btn-lg next-quiz">Next step</a>
+            </div>
+            <!-- BUTTONS -->
+          </div>
+          <!-- ./Quiz item -->
+          <div class="quiz-item">
+            <h3>Upload photos of all nfected body parts</h3>
+            <p class="mt-3">We recommend taking a picture of the face on both sides (straight and in profile)</p>
+
+            <div class="quiz-cards file-cards columns-4 mt-4">
+              <label>
+                <input class="quiz-photo d-none" type="file" />
+                <img class="output"></img>
+                <div class="quiz-card file-card">
+                  <div>
+                    <svg width="44" height="39" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.1 38H38.9C39.9874 38 41.0302 37.5669 41.7991 36.7959C42.568 36.0249 43 34.9792 43 33.8889V11.963C43 10.8726 42.568 9.82695 41.7991 9.05597C41.0302 8.28499 39.9874 7.85185 38.9 7.85185H32.0667L27.9667 1H16.0333L11.9333 7.85185H5.1C4.01261 7.85185 2.96976 8.28499 2.20086 9.05597C1.43196 9.82695 1 10.8726 1 11.963V33.8889C1 34.9792 1.43196 36.0249 2.20086 36.7959C2.96976 37.5669 4.01261 38 5.1 38Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                      <path
+                        d="M22 30C26.4183 30 30 26.4183 30 22C30 17.5817 26.4183 14 22 14C17.5817 14 14 17.5817 14 22C14 26.4183 17.5817 30 22 30Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                    <p class="mt-3">Add Photo</p>
+                  </div>
+                </div>
+              </label>
+              <label>
+                <input class="quiz-photo d-none" type="file" />
+                <img class="output"></img>
+                <div class="quiz-card file-card">
+                  <div>
+                    <svg width="44" height="39" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.1 38H38.9C39.9874 38 41.0302 37.5669 41.7991 36.7959C42.568 36.0249 43 34.9792 43 33.8889V11.963C43 10.8726 42.568 9.82695 41.7991 9.05597C41.0302 8.28499 39.9874 7.85185 38.9 7.85185H32.0667L27.9667 1H16.0333L11.9333 7.85185H5.1C4.01261 7.85185 2.96976 8.28499 2.20086 9.05597C1.43196 9.82695 1 10.8726 1 11.963V33.8889C1 34.9792 1.43196 36.0249 2.20086 36.7959C2.96976 37.5669 4.01261 38 5.1 38Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                      <path
+                        d="M22 30C26.4183 30 30 26.4183 30 22C30 17.5817 26.4183 14 22 14C17.5817 14 14 17.5817 14 22C14 26.4183 17.5817 30 22 30Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                    <p class="mt-3">Add Photo</p>
+                  </div>
+                </div>
+              </label>  <label>
+                <input class="quiz-photo d-none" type="file" />
+                <img class="output"></img>
+                <div class="quiz-card file-card">
+                  <div>
+                    <svg width="44" height="39" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.1 38H38.9C39.9874 38 41.0302 37.5669 41.7991 36.7959C42.568 36.0249 43 34.9792 43 33.8889V11.963C43 10.8726 42.568 9.82695 41.7991 9.05597C41.0302 8.28499 39.9874 7.85185 38.9 7.85185H32.0667L27.9667 1H16.0333L11.9333 7.85185H5.1C4.01261 7.85185 2.96976 8.28499 2.20086 9.05597C1.43196 9.82695 1 10.8726 1 11.963V33.8889C1 34.9792 1.43196 36.0249 2.20086 36.7959C2.96976 37.5669 4.01261 38 5.1 38Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                      <path
+                        d="M22 30C26.4183 30 30 26.4183 30 22C30 17.5817 26.4183 14 22 14C17.5817 14 14 17.5817 14 22C14 26.4183 17.5817 30 22 30Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                    <p class="mt-3">Add Photo</p>
+                  </div>
+                </div>
+              </label>  <label>
+                <input class="quiz-photo d-none" type="file" />
+                <img class="output"></img>
+                <div class="quiz-card file-card">
+                  <div>
+                    <svg width="44" height="39" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5.1 38H38.9C39.9874 38 41.0302 37.5669 41.7991 36.7959C42.568 36.0249 43 34.9792 43 33.8889V11.963C43 10.8726 42.568 9.82695 41.7991 9.05597C41.0302 8.28499 39.9874 7.85185 38.9 7.85185H32.0667L27.9667 1H16.0333L11.9333 7.85185H5.1C4.01261 7.85185 2.96976 8.28499 2.20086 9.05597C1.43196 9.82695 1 10.8726 1 11.963V33.8889C1 34.9792 1.43196 36.0249 2.20086 36.7959C2.96976 37.5669 4.01261 38 5.1 38Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                      <path
+                        d="M22 30C26.4183 30 30 26.4183 30 22C30 17.5817 26.4183 14 22 14C17.5817 14 14 17.5817 14 22C14 26.4183 17.5817 30 22 30Z"
+                        stroke="#DDE2E0"
+                        stroke-width="2"
+                        stroke-linecap="square"
+                      />
+                    </svg>
+                    <p class="mt-3">Add Photo</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="quiz-item">
+            <h3>Select type of your skin</h3>
+          </div>
+          <div class="quiz-item">
+            <h3>Create an account to contact</h3>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-4 text-sm d-flex align-items-center justify-content-center quiz-bottom-collaboration">
+        <span class="mr-2">In collaboration with</span>
+        <a class="d-inline-flex" href="#"><img src="./gfx/DAHL-logo.svg" alt="" /></a>
+      </div>
+    </div>
+    <!-- ./Quiz -->
+   </div>
+
+    <script src="./js/quiz.js"></script>
+  </body>
+</html>

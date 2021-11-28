@@ -1,0 +1,113 @@
+.skin-cards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 116px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+
+.skin-cards .skin-card {
+  margin: 0 auto;
+}
+
+.skin-card {
+  max-width: 320px;
+}
+
+.skin-card__img {
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.skin-card:hover .skin-card__img img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.skin-card__img img {
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.skin-card__link {
+  color: var(--primary);
+  position: relative;
+  display: inline-block !important;
+  white-space: nowrap;
+}
+
+.skin-card__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 2px;
+  left: 0;
+  background-color: var(--primary);
+}
+
+.skin-card__link:hover::before {
+  -webkit-animation: lineToRight 0.3s ease-out;
+  animation: lineToRight 0.3s ease-out;
+}
+
+@-webkit-keyframes lineToRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes lineToRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Tablet up */
+@media (min-width: 768px) {
+  .skin-cards {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 116px 40px;
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+/* Desktop up */
+@media (min-width: 992px) {
+  .skin-cards {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 80px 40px;
+    -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .skin-cards {
+    grid-gap: 80px 68px;
+  }
+}

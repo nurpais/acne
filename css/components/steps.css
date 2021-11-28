@@ -1,0 +1,110 @@
+.steps-cards {
+  margin-top: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.step-img {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.step-img .player {
+  position: relative;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.step-circle {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  left: calc(50% - 56px);
+  bottom: 0;
+  -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1);
+  transition: -webkit-transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1);
+  -o-transition: transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1);
+  transition: transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1);
+  transition: transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1),
+    -webkit-transform 1.2s cubic-bezier(0.251, 0.102, 0.25, 1);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.step-card:nth-child(2) .step-circle {
+  top: 25px;
+  left: calc(50% - 65px);
+}
+
+.step-card:nth-child(3) .step-circle {
+  bottom: 24px;
+  left: calc(50% - 108px);
+}
+
+.step-info {
+  position: relative;
+}
+
+@media (min-width: 1100px) {
+  .steps-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Step card */
+.step-card {
+  background: #ffffff;
+  border: 1px solid #dde2e0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 40px 24px;
+  margin-top: -1px;
+  flex: 1;
+}
+
+.step-label {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary);
+}
+
+/* Tablet up */
+@media (min-width: 768px) {
+  .step-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 40px;
+  }
+  .step-img {
+    min-width: 296px;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .step-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .step-card:not(:last-child) {
+    margin-right: -1px;
+  }
+  .step-img {
+    min-width: initial;
+    margin-right: 0;
+  }
+}

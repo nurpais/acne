@@ -1,0 +1,119 @@
+.procedure-cards {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 116px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+}
+
+.procedure-cards .procedure-card {
+  margin: 0 auto;
+}
+
+.procedure-card {
+  max-width: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  display: block;
+  color: #636363;
+}
+
+.procedure-card--primary {
+  background-color: var(--primary-light);
+}
+
+.procedure-card--primary .procedure-card__body {
+  border-color: var(--primary-light);
+}
+
+.procedure-card--primary .btn {
+  background-color: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  color: #fff !important;
+}
+.procedure-card--primary .btn:hover {
+  background-color: var(--primary-dark) !important;
+  border: 1px solid var(--primary-dark) !important;
+}
+
+.procedure-card__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.procedure-card__heading:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.procedure-card__tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: var(--primary);
+  font-size: 12px;
+  line-height: 20px;
+  padding: 2px 8px;
+  background: #ffffff;
+  border-radius: 2px;
+  z-index: 10;
+  font-weight: 500;
+}
+.procedure-card__tag.procedure-card__tag--primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.procedure-card__body {
+  border: 1px solid #dde2e0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top: 0;
+  padding: 24px;
+}
+
+/* Tablet up */
+@media (min-width: 768px) {
+  .procedure-cards {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 116px 40px;
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+/* Desktop up */
+@media (min-width: 992px) {
+  .procedure-cards {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 80px 40px;
+    -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .procedure-cards {
+    grid-gap: 80px 68px;
+  }
+}
